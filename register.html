@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="login-form">
-      <div class="login-text">Sign in:</div>
+      <div class="login-text">Sign up:</div>
       <form>
         <div class="form-group">
           <input
@@ -34,18 +34,27 @@
             required
           />
         </div>
+        <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="repeat password*"
+              value=""
+              required
+            />
+          </div>
         <div class="text-center">
           <button
             type="button"
             class="btn btn-success"
-            onclick=loginButtonClicked()
+            onclick=signUpButtonClicked()
           >
-            Login
+            Sign up
           </button>
         </div>
         <div class="text-center">
-          New user?<button type="button" class="btn btn-link" onclick="window.location.href='register.html'" >
-            Create an account
+          Existing user?<button type="button" class="btn btn-link" onclick="window.location.href='index.html'" >
+            Login here
           </button>
         </div>
       </form>

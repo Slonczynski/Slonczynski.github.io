@@ -3,11 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 } */
-
 body {
   background-color: #0062cc;
 }
-
 .login-value {
   margin-top: 5%;
   margin-bottom: 5%;
