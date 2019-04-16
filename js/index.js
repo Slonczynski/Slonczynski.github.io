@@ -1,14 +1,12 @@
-function loginButtonClicked() {
-  let loginFormValue = document.getElementsByClassName('form-control')[0].value;
-  let passwordFormValue = document.getElementsByClassName('form-control')[1]
-    .value;
-  console.log(loginFormValue);
-  console.log(passwordFormValue);
+// function loginButtonClicked() {
+//   let loginFormValue = document.getElementsByClassName('form-control')[0].value;
+//   let passwordFormValue = document.getElementsByClassName('form-control')[1]
+//     .value;
+//   console.log(loginFormValue);
+//   console.log(passwordFormValue);
 
-  // Reset inputs
-  document.getElementsByClassName('form-control')[0].value = '';
-  document.getElementsByClassName('form-control')[1].value = '';
-}
+// Reset inputs
+// }
 
 function signUpButtonClicked() {
   let passwordFormValue = document.getElementsByClassName('form-control')[1]
