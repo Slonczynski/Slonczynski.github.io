@@ -18,33 +18,32 @@
         <div class="login-text">Sign up:</div>
         <form>
           <div class="form-group">
+            <label for="inputEmail">Email address</label>
             <input
-              type="text"
+              type="email"
               class="form-control"
-              placeholder="e-mail*"
-              value=""
-              required
+              id="inputEmail"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
             />
           </div>
           <div class="form-group">
+            <label for="inputPassword">Password</label>
             <input
               type="password"
               class="form-control"
-              placeholder="password*"
-              value=""
-              required
+              id="inputPassword"
+              placeholder="Password"
             />
           </div>
           <div class="form-group">
-            <div id="repeat-password">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="repeat password*"
-                value=""
-                required
-              />
-            </div>
+            <label for="inputPassword">Confirm password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Password"
+            />
           </div>
 
           <div class="text-center">
@@ -71,6 +70,7 @@
         </form>
       </div>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
