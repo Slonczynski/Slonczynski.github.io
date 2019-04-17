@@ -18,21 +18,22 @@
         <div class="login-text">Sign in:</div>
         <form>
           <div class="form-group">
+            <label for="inputEmail">Email address</label>
             <input
-              type="text"
+              type="email"
               class="form-control"
-              placeholder="e-mail*"
-              value=""
-              required
+              id="inputEmail"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
             />
           </div>
           <div class="form-group">
+            <label for="inputPassword">Password</label>
             <input
               type="password"
               class="form-control"
-              placeholder="password*"
-              value=""
-              required
+              id="inputPassword"
+              placeholder="Password"
             />
           </div>
           <div class="text-center">
@@ -45,17 +46,24 @@
             </button>
           </div>
           <div class="text-center">
-            New user?<button
-              type="button"
-              class="btn btn-link"
-              onclick="window.location.href='register.html'"
-            >
-              Create an account
-            </button>
+            <span id="submit-button">
+              New user?
+            </span>
+
+            <div class="create-an-account-link">
+              <button
+                type="button"
+                class="btn btn-link"
+                onclick="window.location.href='register.html'"
+              >
+                Create an account
+              </button>
+            </div>
           </div>
         </form>
       </div>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
