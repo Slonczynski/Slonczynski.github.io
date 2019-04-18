@@ -18,3 +18,8 @@ function signUpButtonClicked() {
       "Those passwords didn't match. Try again";
   }
 }
+
+function loginButtonClicked() {
+  const email = document.getElementByClassName('form-control')[0].value;
+  const password = document.getElementByClassName('form-control')[1].value;
+}

@@ -43,6 +43,9 @@ body {
 .submit-error {
   padding-top: 1px;
 }
+.change-page-box {
+  padding-top: 2px;
+}
 label[for='inputEmail'] {
   color: #fff;
 }
