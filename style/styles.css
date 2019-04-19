@@ -1,8 +1,6 @@
-/* * {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
-} */
+}
 body {
   background-color: #0062cc;
 }
@@ -36,9 +34,9 @@ body {
   padding: 3%;
 }
 #error-message {
-  color: #d62a2a;
+  color: #f17d7d;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .submit-error {
   padding-top: 1px;
