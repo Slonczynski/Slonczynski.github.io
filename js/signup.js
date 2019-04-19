@@ -10,9 +10,11 @@ function signupButtonClicked() {
     document.getElementsByClassName('form-control')[1].value = '';
 
     // signup the user with Firebase
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {});
-  } else {
-    document.getElementById('error-message').innerHTML =
-      "Those passwords didn't match. Try again";
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(cred => {})
+      .catch(error => {
+        document.getElementById('error-message').innerHTML = error.message;
+      });
   }
 }

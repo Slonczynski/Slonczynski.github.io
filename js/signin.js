@@ -8,6 +8,6 @@ function loginButtonClicked() {
       window.location.href = 'todo.html';
     })
     .catch(error => {
-      console.error(error.message);
+      document.getElementById('error-messages').innerHTML = error.message;
     });
 }
