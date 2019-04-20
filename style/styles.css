@@ -45,9 +45,9 @@ body {
 .change-page-box {
   padding-top: 2px;
 }
-label[for='inputEmail'] {
+label[for='input-email'] {
   color: #fff;
 }
-label[for='inputPassword'] {
+label[for='input-password'] {
   color: #fff;
 }
