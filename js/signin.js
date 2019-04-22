@@ -7,17 +7,12 @@ addEventListener('keyup', function(event) {
 });
 
 function loginButtonClicked() {
-  // nodes = document.getElementById('error-messages');
-  // if (nodes) {
-  //   document.getElementById('spinner-error-box').outerHTML = '';
-  // }
+  let spinner = document.createElement('span');
+  spinner.setAttribute('class', 'spinner-border spinner-border-sm');
+  document.getElementsByClassName('btn btn-success')[0].appendChild(spinner);
 
   const email = document.getElementsByClassName('form-control')[0].value;
   const password = document.getElementsByClassName('form-control')[1].value;
-
-  let node = document.createElement('div');
-  node.setAttribute('class', 'spinner-border');
-  document.getElementById('spinner-error-box').appendChild(node);
 
   auth
     .signInWithEmailAndPassword(email, password)
@@ -27,15 +22,7 @@ function loginButtonClicked() {
       window.location.href = 'todo.html';
     })
     .catch(error => {
-      // let elem = document.getElementById('spinner-error-box');
-      // while (elem[0]) {
-      //   elem[0].parentNode.removeChild(elem[0]);
-      // }
-      // Show error to the user
-      // let errorMessage = document.createElement('span');
-      // node.setAttribute('id', 'error-messages');
-      // document
-      //   .getElementById('spinner-error-box')
-      //   .appendChild(errorMessage).innerHTML = error.message;
+      spinner.parentNode.removeChild(spinner);
+      document.getElementById('error-message').innerHTML = error.message;
     });
 }

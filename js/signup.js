@@ -7,6 +7,10 @@ addEventListener('keyup', function(event) {
 });
 // get user credentials
 function signupButtonClicked() {
+  let spinner = document.createElement('span');
+  spinner.setAttribute('class', 'spinner-border spinner-border-sm');
+  document.getElementsByClassName('btn btn-success')[0].appendChild(spinner);
+
   const email = document.getElementsByClassName('form-control')[0].value;
   const password = document.getElementsByClassName('form-control')[1].value;
   const repeatPassword = document.getElementsByClassName('form-control')[2]
@@ -21,10 +25,12 @@ function signupButtonClicked() {
       .createUserWithEmailAndPassword(email, password)
       .then(cred => {})
       .catch(error => {
-        document.getElementById('error-messages').innerHTML = error.message;
+        spinner.parentNode.removeChild(spinner);
+        document.getElementById('error-message').innerHTML = error.message;
       });
   } else {
-    document.getElementById('error-messages').innerHTML =
+    spinner.parentNode.removeChild(spinner);
+    document.getElementById('error-message').innerHTML =
       "Those passwords didn't match. Try again.";
   }
 }
