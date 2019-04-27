@@ -23,7 +23,9 @@ function signupButtonClicked() {
     // signup the user with Firebase
     auth
       .createUserWithEmailAndPassword(email, password)
-      .then(cred => {})
+      .then(user => {
+        window.location.href = 'todo.html';
+      })
       .catch(error => {
         spinner.parentNode.removeChild(spinner);
         document.getElementById('error-message').innerHTML = error.message;

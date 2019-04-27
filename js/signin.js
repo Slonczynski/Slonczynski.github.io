@@ -18,7 +18,6 @@ function loginButtonClicked() {
     .signInWithEmailAndPassword(email, password)
 
     .then(user => {
-      console.log('success');
       window.location.href = 'todo.html';
     })
     .catch(error => {
