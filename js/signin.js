@@ -9,6 +9,7 @@ addEventListener('keyup', function(event) {
 function loginButtonClicked() {
   let spinner = document.createElement('span');
   spinner.setAttribute('class', 'spinner-border spinner-border-sm');
+  spinner.setAttribute('id', 'spinning-button');
   document.getElementsByClassName('btn btn-success')[0].appendChild(spinner);
 
   const email = document.getElementsByClassName('form-control')[0].value;
